@@ -1,3 +1,7 @@
 
 data/NYPD_Complaint_Data_Historic.csv
 data/tb_nyc_model.csv
+data/NYPD_Complaint_Data_Historic.parquet
+data/tb_nyc_model.parquet
+data/tb_nyc_model.parquet
+data/.DS_Store
