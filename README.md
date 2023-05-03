@@ -2,11 +2,16 @@
 
 ## Introduction
 
-Welcome to my data science project! The purpose of this project was to address two common challenges in clustering analysis, specifically unsupervised learning: handling large datasets and performing geo-spatial and temporal clustering. To accomplish this, I selected a dataset from the NYC Open Data repository and developed a model to identify crime hotspots in Brooklyn using the BIRCHSCAN procedure. The clusters are defined over time as well as geographically.
+The purpose of this project was to address two common challenges in clustering analysis, specifically unsupervised learning: handling large datasets and performing spatial and temporal clustering. To accomplish this, I selected a dataset from the [NYC Open Data repository](https://data.cityofnewyork.us/) and developed a model to identify crime hotspots in Brooklyn using the [BIRCHSCAN procedure](https://www.sciencedirect.com/science/article/abs/pii/S0957417421009283).
 
-## Background
+Crime hotspot detection is a [well-defined problem in data-driven policing](https://www.sciencedirect.com/science/article/abs/pii/S0957417421009283), and there are many existing approaches for identifying crime hotspots. In this analysis, I will focus on building a solution for identifying street-level crime hotspots in Brooklyn using the BIRCHSCAN algorithm. The BIRCHSCAN algorithm is a scalable and efficient clustering method that is well-suited for large datasets.
 
-Unsupervised learning techniques such as clustering can be a powerful tool for identifying patterns in large datasets. However, the process can become computationally intensive and difficult to interpret when working with very large datasets or incorporating geo-spatial and temporal information. This project aims to address these challenges by utilizing the BIRCHSCAN algorithm to efficiently cluster the NYC crime data and identify hotspots in Brooklyn over both space and time.
+## Libraries
+
+1. `pandas` - data manipulation and analysis;
+1. `sklearn` - machine learning;
+1. `matplotlib` & `seaborn` - data visualization;
+1. `osmnx` - street network analysis.
 
 ## Dataset
 
@@ -23,3 +28,10 @@ The analysis revealed several crime hotspots in Brooklyn, with a high concentrat
 ## Conclusion
 
 In conclusion, this project demonstrates the use of the BIRCHSCAN algorithm to efficiently identify crime hotspots in Brooklyn using a large and complex dataset that includes both geographical and temporal dimensions. The results provide valuable insights into the spatial and temporal distribution of crime in the borough, which can inform decision-making and resource allocation for law enforcement and community leaders.
+
+## References
+
+1. https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i
+1. https://www.ojp.gov/pdffiles1/nij/209393.pdf
+1. https://www.sciencedirect.com/science/article/abs/pii/S0957417421009283
+1. https://www.sciencedirect.com/science/article/pii/S1877050916315824
