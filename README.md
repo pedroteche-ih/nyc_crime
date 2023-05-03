@@ -55,7 +55,7 @@ The higher the `meter_month_ratio`, the more important the temporal dimension is
 
 Through empirical investigation I determined that for street-level hotspots a meter-to-month ratio of **50** was good. I utilized the same distance distribution as before to evaluate the new distribution of distances after the transformation.
 
-![Spatiotemporal Distribution](output/spatiotemporal_density_functions_time.png)
+![Spatiotemporal Distribution](output/spatiotemporal_density_functions.png)
 
 To create a large number of small clusters (street-level hotspots according to the literature), I will use a small ($minSamp = 50$, the DBSCAN neighboorhood size). I selected the $\epsilon$ parameter based on the spatio-temporal distance density function: the definition of street-level hotspots means leads to a clustering solution with many outliers (most crimes won't be inside a hotspot). I started the investigation at $\epsilon = 200$ and decresed it to 190 based on final cluster sizes. At this point in our distance density function only **~10%** of datapoints are within $\epsilon$ of its $minSamp$ neighbors.
 
@@ -85,6 +85,9 @@ For a more direct application, we can look at the geographical distribution of a
 
 ![Active Hotspots](output/active_hotspots.png)
 
+Furthermore, we can investigate the trajectory of specific hotspots over time:
+
+![Hotspot Trajectory](output/active_hotspots/hotspot_377_evolution.png)
 ## References
 
 1. https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i
