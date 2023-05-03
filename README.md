@@ -19,7 +19,19 @@ The dataset used for this project was obtained from the NYC Open Data repository
 
 ## Conclusion
 
-In conclusion, this project demonstrates the use of the BIRCHSCAN algorithm to efficiently identify crime hotspots in Brooklyn using a large and complex dataset that includes both geographical and temporal dimensions. The results provide valuable insights into the spatial and temporal distribution of crime in the borough, which can inform decision-making and resource allocation for law enforcement and community leaders.
+In conclusion, this project demonstrates the use of the BIRCHSCAN algorithm to efficiently identify crime hotspots in Brooklyn using a large and complex dataset that includes both geographical and temporal dimensions. The results show that this methodology can be used to find street-level hotspots consistently, generating both actionable outputs and insights for further investigation.
+
+In the map below we can see the active street-level hotspots as of 01/01/2023 in Brooklyn:
+
+![Active Hotspots](output/active_hotspots.png)
+
+Furthermore, we can investigate the trajectory of specific hotspots over time:
+
+![Hotspot Trajectory](output/active_hotspots/hotspot_377_evolution.png)
+
+This can empower both community action as well as help law-enforcement focus their efforts on specific areas for crime prevention. If you are interested in learning more about this project, please check the section on methodology below. The Jupyter Notebook associated with this project is fully documented and can be used as a reference for future projects - both on this dataset as well as other geocoded datasets.
+
+If you want to collaborate on other projects, please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/pedro-teche/).
 
 ## Methodology
 
@@ -30,7 +42,7 @@ In conclusion, this project demonstrates the use of the BIRCHSCAN algorithm to e
 
 On first evaluation, I can clearly see the neighborhood-level crime hotspots in Brooklyn, which are consistent with the results of previous studies.
 
-#![Brooklyn Crime Map](output/crime_map_brooklin_2001_2021.png)
+![Brooklyn Crime Map](output/crime_map_brooklin_2001_2021.png)
 
 There are two key problems when attempting to cluster a dataset such as this one:
 
