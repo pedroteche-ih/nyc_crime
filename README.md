@@ -28,7 +28,7 @@ The dataset used for this project was obtained from the NYC Open Data repository
 
 On first evaluation, we can clearly see the neighborhood-level crime hotspots in Brooklyn, which are consistent with the results of previous studies.
 
-![Brooklyn Crime Map](output/crime_map_brooklin_2001_2021.png)
+![Brooklyn Crime Map](output/crime_map_brooklin_2001_2021.png | width=100)
 
 There are two key problems when attempting to cluster a dataset such as this one:
 
@@ -38,6 +38,10 @@ There are two key problems when attempting to cluster a dataset such as this one
 The first issue is a technical one and can be solved in a variety of manners. In this project, I used the BIRCHSCAN algorithm, which is a scalable and efficient clustering method that is well-suited for large datasets. The second issue is more complex and requires a more creative approach. 
 
 We first must consider the **distance distribution** of different crimes in our dataset. This is a traditional step when utilizing density-based algorithms, such as DBSCAN - it is often used to estimate the hyperparameter $\epsilon$. In this case, however, we will use it to create a new feature, `time_meters`, which map the temporal dimension of our dataset to the spatial dimension. This allows us to use both temporal and spatial features in our clustering algorithm, detcting hotspots as they begin, evolve and end. 
+
+We will begin by investigating the distance distribution of different neighborhood sizes using only the latitude and longitude features of our dataset.
+
+![Distance Distribution](output/geographical_density_functions.png)
 
 ## Conclusion
 
