@@ -100,6 +100,7 @@ For a more direct application, we can look at the geographical distribution of a
 Furthermore, we can investigate the trajectory of specific hotspots over time:
 
 ![Hotspot Trajectory](output/active_hotspots/hotspot_377_evolution.png)
+
 ## References
 
 1. https://data.cityofnewyork.us/Public-Safety/NYPD-Complaint-Data-Historic/qgea-i56i
