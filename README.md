@@ -1,5 +1,5 @@
 # Large Dataset Clustering - Crime Hotspots in Brooklyn
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 The purpose of this project was to address two common challenges in clustering analysis, specifically unsupervised learning: handling large datasets and performing spatial and temporal clustering. To accomplish this, I selected a dataset from the [NYC Open Data repository](https://data.cityofnewyork.us/) and developed a model to identify crime hotspots in Brooklyn using the [BIRCHSCAN procedure](https://www.sciencedirect.com/science/article/abs/pii/S0957417421009283).
@@ -26,7 +26,18 @@ The dataset used for this project was obtained from the NYC Open Data repository
 
 ## Results
 
-The analysis revealed several crime hotspots in Brooklyn, with a high concentration of incidents occurring in specific neighborhoods and at certain times. By examining both the spatial and temporal distribution of crime, the analysis provided a more nuanced understanding of the nature of criminal activity in the borough. These findings can help law enforcement and community leaders to better understand the patterns of crime in Brooklyn and allocate resources more effectively.
+On first evaluation, we can clearly see the neighborhood-level crime hotspots in Brooklyn, which are consistent with the results of previous studies.
+
+![Brooklyn Crime Map](output/crime_map_brooklin_2001_2021.png)
+
+There are two key problems when attempting to cluster a dataset such as this one:
+
+1. The dataset is too large to be clustered using traditional methods;
+1. The temporal dimensions is often ignored (or, at most, included as filtering criteria).
+
+The first issue is a technical one and can be solved in a variety of manners. In this project, I used the BIRCHSCAN algorithm, which is a scalable and efficient clustering method that is well-suited for large datasets. The second issue is more complex and requires a more creative approach. 
+
+We first must consider the **distance distribution** of different crimes in our dataset. This is a traditional step when utilizing density-based algorithms, such as DBSCAN - it is often used to estimate the hyperparameter $\epsilon$. In this case, however, we will use it to create a new feature, `time_meters`, which map the temporal dimension of our dataset to the spatial dimension. This allows us to use both temporal and spatial features in our clustering algorithm, detcting hotspots as they begin, evolve and end. 
 
 ## Conclusion
 
