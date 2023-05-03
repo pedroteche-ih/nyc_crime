@@ -28,7 +28,7 @@ The dataset used for this project was obtained from the NYC Open Data repository
 
 On first evaluation, we can clearly see the neighborhood-level crime hotspots in Brooklyn, which are consistent with the results of previous studies.
 
-![Brooklyn Crime Map](output/crime_map_brooklin_2001_2021.png | width=100)
+<img src="output/crime_map_brooklin_2001_2021.png" width="800">
 
 There are two key problems when attempting to cluster a dataset such as this one:
 
