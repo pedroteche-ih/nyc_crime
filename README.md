@@ -1,25 +1,26 @@
 # Large Dataset Clustering - Crime Hotspots in Brooklyn
 
-## Introduction
-
 The purpose of this project was to address two common challenges in clustering analysis, specifically unsupervised learning: handling large datasets and performing spatial and temporal clustering. To accomplish this, I selected a dataset from the [NYC Open Data repository](https://data.cityofnewyork.us/) and developed a model to identify crime hotspots in Brooklyn using the [BIRCHSCAN procedure](https://www.sciencedirect.com/science/article/abs/pii/S0957417421009283).
 
 Crime hotspot detection is a [well-defined problem in data-driven policing](https://www.sciencedirect.com/science/article/abs/pii/S0957417421009283), and there are many existing approaches for identifying crime hotspots. In this analysis, I will focus on building a solution for identifying street-level crime hotspots in Brooklyn using the BIRCHSCAN algorithm. The BIRCHSCAN algorithm is a scalable and efficient clustering method that is well-suited for large datasets.
 
 ## Libraries
 
-1. `pandas` - data manipulation and analysis;
+1. `pandas` & `numpy` - data manipulation and analysis;
 1. `sklearn` - machine learning;
 1. `matplotlib` & `seaborn` - data visualization;
 1. `osmnx` - street network analysis.
 
 ## Dataset
 
-The dataset used for this project was obtained from the NYC Open Data repository. It includes crime incident reports from January 2019 to June 2022, with details such as date, time, location, and type of crime. The dataset was preprocessed to include only incidents that occurred in Brooklyn, which resulted in a dataset of approximately 502,374 rows.
+The dataset used for this project was obtained from the NYC Open Data repository. It includes crime incident reports with details such as date, time, location, type of crime, victimology. The dataset was preprocessed to include only **felonies** that occurred in **Brooklyn** between 2000 & 2022, which resulted in a dataset of 751,972 rows.
 
 ## Methodology
 
-To identify crime hotspots in Brooklyn, I utilized the BIRCHSCAN algorithm, a scalable and efficient clustering method that is well-suited for large datasets. The BIRCHSCAN procedure was applied to the preprocessed dataset to identify clusters of similar crimes based on their geographic proximity and frequency of occurrence, as well as their temporal patterns. The resulting clusters were then visualized on a map of Brooklyn, providing insights into the spatial and temporal distribution of crime in the borough.
+1. Outlier cleaning (threshold-based);
+1. Feature engineering, especifically the creation of a new feature `time_meters` based on neighborhood-distance evaluations, allowing the use of both temporal and spatial features in hotspot detection;
+1. BIRCHSCAN clustering algorithm;
+1. Visualization and analysis of results using `osmnx` and `matplotlib`.
 
 ## Results
 
