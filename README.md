@@ -31,6 +31,8 @@ Furthermore, we can investigate the trajectory of specific hotspots over time:
 
 ![Hotspot Trajectory](output/active_hotspots/hotspot_377_evolution.png)
 
+The map above shows the distribution of crimes associated with this hotspot (the contour plot, where green indicates higher density of crimes), it's starting and current points and the trajectory over time between these to points.
+
 This can empower both community action as well as help law-enforcement focus their efforts on specific areas for crime prevention. If you are interested in learning more about this project, please check the section on methodology below. The Jupyter Notebook associated with this project is fully documented and can be used as a reference for future projects - both on this dataset as well as other geocoded datasets.
 
 If you want to collaborate on other projects, please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/pedro-teche/).
